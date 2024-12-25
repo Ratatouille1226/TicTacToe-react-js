@@ -1,6 +1,10 @@
 import { InformationLayout } from "./InformationLayout"
 
-export const Information = () => {
+export const Information = ({isDraw, isGameEnded, currentPlayer}) => {
 
-    return <InformationLayout />
+    return  <InformationLayout 
+                isDraw={isDraw} 
+                isGameEnded={isGameEnded} 
+                currentPlayer={currentPlayer}
+            />
 }
