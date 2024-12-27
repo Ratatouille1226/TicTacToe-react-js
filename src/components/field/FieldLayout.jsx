@@ -1,6 +1,7 @@
 import styles from './fieldLayout.module.css';
+import PropTypes from 'prop-types';
 
-export const FieldLayout = ({ field, onClickField, onClickButtonStartAgain }) => {
+export const FieldLayout = ({ field, onClickField }) => {
 
     return (
         <>
@@ -9,9 +10,12 @@ export const FieldLayout = ({ field, onClickField, onClickButtonStartAgain }) =>
                     <div key={index} className={styles.fields} onClick={() => onClickField(fields, index)}>{fields}</div>
                 ))}
             </div>
-            <div className={styles.buttons}>
-            <button className={styles.button} onClick={onClickButtonStartAgain}>Начать заново</button>
-            </div>
         </>
     );
+}
+
+FieldLayout.propTypes = {
+    field: PropTypes.array,
+    onClickField: PropTypes.func,
+    onClickButtonStartAgain: PropTypes.func
 }

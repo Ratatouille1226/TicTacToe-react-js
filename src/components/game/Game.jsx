@@ -6,9 +6,8 @@ export const Game = () => {
     const [currentPlayer, setCurrentPlayer] = useState('O');
     const [isGameEnded, setIsGameEnded] = useState(false);
     const [isDraw, setIsDraw] = useState(false);
-
-
     const [field, setField] = useState(['', '', '', '', '', '', '', '', '',]);
+
     const WIN_PATTERNS = [
         [0, 1, 2], [3, 4, 5], [6, 7, 8], //Победы по горизонтали
         [0, 3, 6], [1, 4, 7], [2, 5, 8], //Победы по вертикали
@@ -24,8 +23,11 @@ export const Game = () => {
                 setCurrentPlayer={setCurrentPlayer}
                 field={field}
                 setField={setField}
+                setIsGameEnded={setIsGameEnded}
+                setIsDraw={setIsDraw}
                 setWhoseTurn={setWhoseTurn}
                 whoseTurn={whoseTurn}
+                winPatterns={WIN_PATTERNS}
             />
         </>
     );
