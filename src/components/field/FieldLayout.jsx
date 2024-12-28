@@ -7,7 +7,13 @@ export const FieldLayout = ({ field, onClickField }) => {
         <>
             <div className={styles.fieldLayout}>
                 {field.map((fields, index) => (
-                    <div key={index} className={styles.fields} onClick={() => onClickField(fields, index)}>{fields}</div>
+                    <div 
+                        key={index} 
+                        className={styles.fields} 
+                        onClick={() => onClickField(fields, index)}
+                    >
+                        {<span className={fields === 'X' ? styles.red : styles.green}>{fields}</span>}
+                    </div>
                 ))}
             </div>
         </>
@@ -17,5 +23,4 @@ export const FieldLayout = ({ field, onClickField }) => {
 FieldLayout.propTypes = {
     field: PropTypes.array,
     onClickField: PropTypes.func,
-    onClickButtonStartAgain: PropTypes.func
 }

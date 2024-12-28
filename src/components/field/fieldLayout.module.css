@@ -38,3 +38,7 @@
     transition: .4s ease;
     box-shadow: 1px 5px 15px black;
 }
+
+.red {color: red;}
+
+.green {color: rgb(2, 255, 2);}

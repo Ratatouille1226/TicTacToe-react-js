@@ -4,8 +4,6 @@ import { GameLayout } from "./GameLayout";
 export const Game = () => {
     const [whoseTurn, setWhoseTurn] = useState(true);
     const [currentPlayer, setCurrentPlayer] = useState('O');
-    const [isGameEnded, setIsGameEnded] = useState(false);
-    const [isDraw, setIsDraw] = useState(false);
     const [field, setField] = useState(['', '', '', '', '', '', '', '', '',]);
 
     const WIN_PATTERNS = [
@@ -17,14 +15,10 @@ export const Game = () => {
     return (
         <>
             <GameLayout 
-                isDraw={isDraw}
-                isGameEnded={isGameEnded}
                 currentPlayer={currentPlayer}
                 setCurrentPlayer={setCurrentPlayer}
                 field={field}
                 setField={setField}
-                setIsGameEnded={setIsGameEnded}
-                setIsDraw={setIsDraw}
                 setWhoseTurn={setWhoseTurn}
                 whoseTurn={whoseTurn}
                 winPatterns={WIN_PATTERNS}
