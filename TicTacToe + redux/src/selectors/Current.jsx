@@ -1,0 +1,1 @@
+export const Current = (state) => state.user.currentPlayer;

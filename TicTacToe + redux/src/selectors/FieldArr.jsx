@@ -1,0 +1,1 @@
+export const FieldArr = (state) => state.user.field;
